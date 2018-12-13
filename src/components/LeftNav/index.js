@@ -17,24 +17,35 @@ import styled from 'styled-components'
 //-----*-----*-----*-----*-----*-----//
 
 const LeftNav = () => (
-  <StyledLeftNav>
-      LeftNavigation
+  <StyledLeftNav className="FCC">
+      <Link to="/">
+        <div className="FCC main-nav home-btn">
+            H
+        </div>
+      </Link>
+      <Link to="/collection">
+        <div className="FCC main-nav goto-collection">
+            C
+        </div>
+      </Link>
+      <Link to="/brand">
+        <div className="FCC main-nav goto-brand">
+            B
+        </div>
+      </Link>
   </StyledLeftNav>
 )
 
-// class LeftNav extends Component {
-//     render() {
-//         return (
-//             <StyledLeftNav>
-//                
-//             </StyledLeftNav>
-//         )
-//     }
-// }
-
-
 const StyledLeftNav = styled.div`
-
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    width: 48px;
+    height: 100vh;
+    border-right: 1px solid pink;
+    & .main-nav {
+        height: 30vh;
+    }
 `
 
 export default LeftNav

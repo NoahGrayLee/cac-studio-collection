@@ -34,7 +34,10 @@ const StyledLayout = styled.div`
 
 `
 const ChildrenContainer = styled.div`
-
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: #f0f0f0;
 `
 
 export default Layout

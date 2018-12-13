@@ -6,6 +6,9 @@ import { Helmet } from 'react-helmet'
 
 // 2. i18n
 // 3. Components
+import LeftColumn from '../../components/LeftColumn';
+import CollectionRightSide from './CollectionRightSide';
+
 // 4. for style
 import styled from 'styled-components'
  
@@ -17,8 +20,12 @@ import styled from 'styled-components'
 //-----*-----*-----*-----*-----*-----//
 
 const Collection = () => (
-  <StyledCollection>
-      Collection
+  <StyledCollection className="FRSB">
+    <Helmet>
+        <title>CAC Collection</title>
+    </Helmet>
+    <LeftColumn pageName="Collection left column" />
+    <CollectionRightSide />
   </StyledCollection>
 )
 
@@ -32,9 +39,10 @@ const Collection = () => (
 //     }
 // }
 
-
 const StyledCollection = styled.div`
-
+    width: 100%;
+    height: 100vh;
+    padding: 0 48px;
 `
 
 export default Collection

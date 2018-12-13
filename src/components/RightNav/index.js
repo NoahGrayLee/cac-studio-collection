@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 // 1. Dependencies
 import { Link } from 'react-router-dom'
-import { Helmet } from 'react-helmet'
 
 // 2. i18n
 // 3. Components
@@ -17,24 +16,32 @@ import styled from 'styled-components'
 //-----*-----*-----*-----*-----*-----//
 
 const RightNav = () => (
-  <StyledRightNav>
-      Right Navigation
+  <StyledRightNav className="FCC">
+    <a href="https://google.com" target="_blank">
+        <div className="sns-btn facebook-link">
+            F
+        </div>
+    </a>
+    <a href="https://google.com" target="_blank">
+        <div className="sns-btn twitter-link">
+            T
+        </div>
+    </a>
+    <a href="https://google.com" target="_blank">
+        <div className="sns-btn pinterest-link">
+            P
+        </div>
+    </a>
   </StyledRightNav>
 )
 
-// class RightNav extends Component {
-//     render() {
-//         return (
-//             <StyledRightNav>
-//                
-//             </StyledRightNav>
-//         )
-//     }
-// }
-
-
 const StyledRightNav = styled.div`
-
+    position: fixed;
+    z-index: 999;
+    right: 0;
+    width: 48px;
+    height: 100vh;
+    border-left: 1px solid pink;
 `
 
 export default RightNav
